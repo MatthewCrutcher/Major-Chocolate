@@ -1,0 +1,34 @@
+.landing-page-redirect-container {
+  background-image: url(./images/LandingPageCover.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: fit-content;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-page-redirect-container h1 {
+  margin: 0;
+  align-self: center;
+  color: white;
+  margin-bottom: 10%;
+}
+
+.landing-page-redirect-container button {
+  width: fit-content;
+  align-self: center;
+  padding: 1% 4%;
+  font-size: 1.5rem;
+  background-color: rgba(73, 129, 212, 1);
+  border: none;
+  color: white;
+}
+
+.landing-page-redirect-container button:hover {
+  cursor: pointer;
+  background-color: rgb(42, 103, 193);
+}
