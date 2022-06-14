@@ -1,0 +1,146 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.103);
+}
+
+.navbar-container {
+  color: white;
+  padding-left: 2%;
+  text-decoration: underline;
+}
+.logo-link {
+  padding: 0.5rem;
+}
+.logo-link:hover {
+  background-color: rgb(148, 148, 148, 0.2);
+  cursor: pointer;
+}
+.navbar-links {
+  margin-right: 1%;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.navbar-links li {
+  list-style: none;
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  align-self: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  padding: 1.5rem;
+  display: block;
+  color: white;
+}
+
+.navbar-links a {
+  font-size: 1.5rem;
+}
+
+.navbar-links-active li:hover {
+  cursor: pointer;
+  background-color: rgb(148, 148, 148, 0.2);
+}
+
+.navbar-links-active ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.navbar-links-active li {
+  list-style: none;
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  align-self: center;
+}
+
+.navbar-links-active li a {
+  text-decoration: none;
+  padding: 1.5rem;
+  display: block;
+  color: white;
+}
+
+.navbar-links-active a {
+  font-size: 1.5rem;
+}
+
+.navbar-links-active li:hover {
+  cursor: pointer;
+  background-color: rgb(148, 148, 148, 0.2);
+}
+
+.dropdown-img {
+  align-self: center;
+  cursor: pointer;
+  display: none;
+  height: 5vh;
+  width: auto;
+  margin-right: 1%;
+}
+
+.dropdown-img-active {
+  transform: rotate(180deg);
+  align-self: center;
+  cursor: pointer;
+  display: none;
+  height: 5vh;
+  width: auto;
+  margin-right: 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-container {
+    padding: 0;
+  }
+  .dropdown-img-active {
+    display: flex;
+  }
+  .dropdown-img {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+  .navbar-container {
+    flex-flow: row wrap;
+  }
+  .navbar-links-active {
+    width: 100%;
+    height: auto;
+    background-color: rgba(169, 112, 92, 0.8);
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.26);
+  }
+  .navbar-links-active li {
+    list-style: none;
+    padding: 3% 0;
+  }
+  .navbar-links-active ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-links-active li {
+    width: 100%;
+    text-align: center;
+  }
+}
