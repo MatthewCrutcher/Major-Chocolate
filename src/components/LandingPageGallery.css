@@ -1,0 +1,86 @@
+.landing-page-gallery-container {
+  height: 100vh;
+  display: grid;
+  align-content: flex-start;
+  padding: 5% 0;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "image1 image3 image4"
+    "image2 image3 image5"
+    "text-button text-button text-button";
+}
+
+#image1 {
+  grid-area: image1;
+}
+#image2 {
+  grid-area: image2;
+}
+#image3 {
+  grid-area: image3;
+  padding: 0 10px;
+}
+#image4 {
+  grid-area: image4;
+}
+#image5 {
+  grid-area: image5;
+}
+
+.new-range-container {
+  padding-top: 50px;
+  grid-area: text-button;
+  text-align: center;
+}
+
+.new-range-container button {
+  width: fit-content;
+  align-self: center;
+  padding: 1% 4%;
+  font-size: 1.5rem;
+  background-color: rgba(73, 129, 212, 1);
+  border: none;
+  color: white;
+}
+.new-range-container button:hover {
+  cursor: pointer;
+  background-color: rgb(42, 103, 193);
+}
+
+@media screen and (max-width: 1350px) {
+  .landing-page-gallery-container {
+    gap: 10px;
+    height: fit-content;
+  }
+  #image1 {
+    grid-area: image1;
+    width: 30vw;
+    align-self: flex-end;
+    justify-self: center;
+  }
+  #image2 {
+    grid-area: image2;
+    width: 30vw;
+    align-self: flex-start;
+    justify-self: center;
+  }
+  #image3 {
+    grid-area: image3;
+    width: 30vw;
+    align-self: center;
+    justify-self: center;
+  }
+  #image4 {
+    grid-area: image4;
+    width: 30vw;
+    align-self: flex-end;
+    justify-self: center;
+  }
+  #image5 {
+    grid-area: image5;
+    width: 30vw;
+    align-self: flex-start;
+    justify-self: center;
+  }
+}
