@@ -81,7 +81,7 @@
   font-size: 1.5rem;
 }
 
-.navbar-links-active li:hover {
+.navbar-links li:hover {
   cursor: pointer;
   background-color: rgb(148, 148, 148, 0.2);
 }
