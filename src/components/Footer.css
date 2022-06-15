@@ -1,0 +1,29 @@
+.footer-container {
+  background-color: rgba(130, 83, 66, 1);
+  min-height: fit-content;
+  height: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container h1 {
+  margin: 0;
+  padding: 0 2%;
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+#footer-itallic {
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-container h1 {
+    padding: 0 1%;
+    text-decoration: underline;
+    font-size: 1em;
+  }
+}
