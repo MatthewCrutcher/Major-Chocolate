@@ -1,0 +1,40 @@
+.landing-page-quotes-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  flex-wrap: wrap;
+  height: fit-content;
+  background-color: rgba(169, 112, 92, 1);
+  justify-content: space-evenly;
+}
+
+.landing-page-quotes-container h1,
+h4 {
+  color: white;
+  font-weight: 200;
+  line-height: 1%;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 10%;
+}
+
+#second-quote {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 500px) {
+  .quote-container {
+    align-items: center;
+    overflow-wrap: break-word;
+  }
+  #second-quote {
+    align-self: center;
+  }
+  .landing-page-quotes-container h1 {
+    font-size: 1.5em;
+  }
+}

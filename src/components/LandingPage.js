@@ -4,6 +4,7 @@ import "./LandingPage.css";
 //Components
 import Navbar from "./Navbar";
 import LandingPageGallery from "./LandingPageGallery";
+import LandingPageQuotes from "./LandingPageQuotes";
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
         <button>View</button>
       </div>
       <LandingPageGallery />
+      <LandingPageQuotes />
     </div>
   );
 }
