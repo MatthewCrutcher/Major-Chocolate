@@ -3,6 +3,8 @@ import React from "react";
 import "./LandingPage.css";
 //Components
 import Navbar from "./Navbar";
+import LandingPageGallery from "./LandingPageGallery";
+import LandingPageQuotes from "./LandingPageQuotes";
 
 function LandingPage() {
   return (
@@ -13,6 +15,8 @@ function LandingPage() {
         <h1>Order Your Favourites</h1>
         <button>View</button>
       </div>
+      <LandingPageGallery />
+      <LandingPageQuotes />
     </div>
   );
 }
