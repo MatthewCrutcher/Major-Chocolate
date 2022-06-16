@@ -10,12 +10,13 @@
   color: white;
   padding-left: 2%;
   text-decoration: underline;
+  background-color: rgba(130, 83, 66, 0.8);
 }
 .logo-link {
   padding: 0.5rem;
 }
 .logo-link:hover {
-  background-color: rgb(148, 148, 148, 0.2);
+  background-color: rgba(86, 86, 86, 0.5);
   cursor: pointer;
 }
 .navbar-links {
@@ -51,7 +52,7 @@
 
 .navbar-links-active li:hover {
   cursor: pointer;
-  background-color: rgb(148, 148, 148, 0.2);
+  background-color: rgba(86, 86, 86, 0.5);
 }
 
 .navbar-links-active ul {
@@ -83,7 +84,7 @@
 
 .navbar-links li:hover {
   cursor: pointer;
-  background-color: rgb(148, 148, 148, 0.2);
+  background-color: rgba(86, 86, 86, 0.5);
 }
 
 .dropdown-img {
