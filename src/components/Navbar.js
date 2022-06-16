@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 //CSS
 import "./Navbar.css";
 //IMAGES
@@ -6,13 +7,14 @@ import Cart from "./images/Cart.png";
 import DrowDown from "./images/navbar-dropdown-white.png";
 // https://stackoverflow.com/questions/10510191/valid-to-use-a-anchor-tag-without-href-attribute
 function Navbar() {
+  const navigate = useNavigate();
   const [active, setActive] = useState(false);
   const toggleActive = () => {
     setActive(!active);
   };
   return (
     <div className="navbar-container">
-      <a className="logo-link">
+      <a className="logo-link" onClick={() => navigate("/")}>
         <h1>Major Chocolate</h1>
       </a>
       <img
@@ -28,7 +30,11 @@ function Navbar() {
           </li>
           <li>
             <a>
-              <img src={Cart} alt="Shopping Cart" />
+              <img
+                onClick={() => navigate("/cart")}
+                src={Cart}
+                alt="Shopping Cart"
+              />
             </a>
           </li>
         </ul>
