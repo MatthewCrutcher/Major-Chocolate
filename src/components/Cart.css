@@ -84,3 +84,72 @@
   height: 25px;
   margin-bottom: 2%;
 }
+.ccv-message-logos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ccv-logos-container input {
+  height: 25px;
+  margin-bottom: 2%;
+}
+
+.ccv-logos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.cart-container input::placeholder {
+  opacity: 0.8;
+}
+
+.cart-container textarea::placeholder {
+  opacity: 0.8;
+}
+
+.payment-form button {
+  width: fit-content;
+  align-self: center;
+  padding: 1% 4%;
+  margin-top: 5%;
+  font-size: 1.5rem;
+  background-color: rgba(73, 129, 212, 1);
+  border: none;
+  color: white;
+}
+
+.payment-form button:hover {
+  cursor: pointer;
+  background-color: rgb(42, 103, 193);
+}
+
+.payment-logos {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.payment-logos img {
+  width: auto;
+  height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .item-container {
+    width: 100%;
+  }
+  .payment-container {
+    width: 100%;
+    padding-bottom: 4%;
+  }
+}

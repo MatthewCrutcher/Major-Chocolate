@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import image2 from "./images/image2.png";
 import line from "./images/cart-line-breaker.png";
 import line2 from "./images/total-seperator.png";
+import mastercard from "./images/mastercard.png";
+import visa from "./images/visa.png";
 //CSS
 import "./Cart.css";
 
@@ -64,8 +66,19 @@ function Cart() {
             alt="Line seperating total to form"
           />
           <form className="payment-form">
-            <input className="name-card-input" />
-            <input className="name-card-input" />
+            <input className="name-card-input" placeholder="Name on card *" />
+            <input className="name-card-input" placeholder="Card number *" />
+            <div className="ccv-message-logos-container">
+              <div className="ccv-logos-container">
+                <input placeholder="CCV*" />
+                <div className="payment-logos">
+                  <img src={mastercard} alt="mastercard logo" />
+                  <img src={visa} alt="visa logo" />
+                </div>
+              </div>
+              <textarea placeholder="A message?..." />
+            </div>
+            <button>Buy</button>
           </form>
         </div>
       </div>
