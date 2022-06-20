@@ -25,16 +25,12 @@ function Navbar() {
       />
       <div className={active ? "navbar-links-active" : "navbar-links"}>
         <ul>
-          <li>
+          <li onClick={() => navigate("/shop")}>
             <a>SHOP</a>
           </li>
-          <li>
+          <li onClick={() => navigate("/cart")}>
             <a>
-              <img
-                onClick={() => navigate("/cart")}
-                src={Cart}
-                alt="Shopping Cart"
-              />
+              <img src={Cart} alt="Shopping Cart" />
             </a>
           </li>
         </ul>
