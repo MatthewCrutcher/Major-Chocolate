@@ -18,9 +18,13 @@ function Cart() {
           <h2>Item Name</h2>
           <div className="quantity-container">
             <h2>Quantity:</h2>
-            <button>-</button>
+            <button className="quantity-minus">
+              <h4>-</h4>
+            </button>
             <h2>2</h2>
-            <button>+</button>
+            <button className="quantity-plus">
+              <h4>+</h4>
+            </button>
           </div>
           <div className="total-item-price-container">
             <h2>Total Price:</h2>
