@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Strawberry Delights",
+      "description": "The Best Chocolate",
+      "imgURL": "major-chocolate/src/components/images/image2.png"
+    },
+    {
+      "id": 2,
+      "title": "Chocolate Bar",
+      "description": "The Best Chocolate",
+      "imgURL": "major-chocolate/src/components/images/image2.png"
+    },
+    {
+      "id": 3,
+      "title": "Dark Chocolate",
+      "description": "The Best Chocolate",
+      "imgURL": "major-chocolate/src/components/images/image2.png"
+    },
+    {
+      "id": 4,
+      "title": "Milk Chocolate",
+      "description": "The Best Chocolate",
+      "imgURL": "major-chocolate/src/components/images/image2.png"
+    }
+  ]
+}
