@@ -31,11 +31,12 @@ function Shop() {
         <div className="amount-added-container">
           <button
             className="minus-button"
-            onClick={() => dispatch(decreaseAmount())}
+            onClick={() => dispatch(decreaseAmount(val.id))}
           >
             <h4>-</h4>
           </button>
           <h3>{cart.amount}</h3>
+
           <button
             className="plus-button"
             onClick={() => dispatch(increaseAmount(val.id))}
