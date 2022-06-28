@@ -16,13 +16,23 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     increaseAmount: (state, action) => {
-      const foundValue = state.find((value) => value.id === action.payload);
+      const foundValue = state.cart.find(
+        (value) => value.itemID === action.payload
+      );
       if (foundValue) {
-        console.log("FOUND");
+        foundValue.amount++;
       }
     },
-    decreaseAmount: (state) => {
-      state.amount--;
+    decreaseAmount: (state, action) => {
+      const foundValue = state.cart.find(
+        (value) => value.itemID === action.payload
+      );
+
+      if (foundValue && foundValue.amount > 0) {
+        foundValue.amount--;
+      } else if (foundValue && foundValue.amount === 1) {
+        state;
+      }
     },
     addToCart: (state, action) => {
       state.cart.push({
