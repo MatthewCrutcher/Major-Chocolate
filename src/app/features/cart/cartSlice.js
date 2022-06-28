@@ -27,8 +27,11 @@ const cartSlice = createSlice({
       const foundValue = state.cart.find(
         (value) => value.itemID === action.payload
       );
+
       if (foundValue && foundValue.amount > 0) {
         foundValue.amount--;
+      } else if (foundValue && foundValue.amount === 1) {
+        state;
       }
     },
     addToCart: (state, action) => {

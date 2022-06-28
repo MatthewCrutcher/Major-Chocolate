@@ -35,7 +35,11 @@ function Shop() {
           >
             <h4>-</h4>
           </button>
-          <h3>{cart.amount}</h3>
+          <h3>
+            {cart.cart.map((value) =>
+              val.id === value.itemID ? value.amount : null
+            )}
+          </h3>
 
           <button
             className="plus-button"
