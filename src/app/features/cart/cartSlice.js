@@ -28,10 +28,13 @@ const cartSlice = createSlice({
         (value) => value.itemID === action.payload
       );
 
-      if (foundValue && foundValue.amount > 0) {
+      if (foundValue && foundValue.amount > 1) {
         foundValue.amount--;
       } else if (foundValue && foundValue.amount === 1) {
-        state;
+        state.cart.splice(
+          state.cart.findIndex((value) => value.itemID === action.payload),
+          1
+        );
       }
     },
     addToCart: (state, action) => {
