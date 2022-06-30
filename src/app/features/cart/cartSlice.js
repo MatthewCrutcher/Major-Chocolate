@@ -1,14 +1,8 @@
 import { createSlice, isAsyncThunkAction } from "@reduxjs/toolkit";
 
 const initialState = {
-  cart: [
-    {
-      itemID: 0,
-      title: "",
-      price: 0,
-      amount: 0,
-    },
-  ],
+  cart: [],
+  totalPrice: 0,
 };
 
 const cartSlice = createSlice({
@@ -22,6 +16,9 @@ const cartSlice = createSlice({
       if (foundValue) {
         foundValue.amount++;
       }
+
+      foundValue.calcPrice = foundValue.initialPrice * foundValue.amount;
+      state.totalPrice += foundValue.initialPrice;
     },
     decreaseAmount: (state, action) => {
       const foundValue = state.cart.find(
@@ -36,17 +33,30 @@ const cartSlice = createSlice({
           1
         );
       }
+      foundValue.calcPrice -= foundValue.initialPrice;
+      state.totalPrice -= foundValue.initialPrice;
+    },
+    totalCartPrice: (state) => {
+      return state.totalPrice + 6;
     },
     addToCart: (state, action) => {
       state.cart.push({
         itemID: action.payload.itemID,
         title: action.payload.title,
         amount: action.payload.amount,
+        initialPrice: action.payload.initialPrice,
+        calcPrice: action.payload.calcPrice,
       });
+      state.totalPrice += action.payload.calcPrice;
     },
   },
 });
 
 export default cartSlice.reducer;
-export const { addToCart, increaseAmount, decreaseAmount, checkAmount } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  increaseAmount,
+  decreaseAmount,
+  checkAmount,
+  totalCartPrice,
+} = cartSlice.actions;
