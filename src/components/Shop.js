@@ -28,28 +28,41 @@ function Shop() {
         <img src={val.imgURL} alt={val.title} />
         <h3>{val.title}</h3>
         <p>{val.description}</p>
-        <div className="amount-added-container">
-          <button
-            className="minus-button"
-            onClick={() => dispatch(decreaseAmount(val.id))}
-          >
-            {cart.cart.map((value) =>
-              value.amount === 1 ? <h4>X</h4> : <h4>-</h4>
-            )}
-          </button>
-          <h3>
-            {cart.cart.map((value) =>
-              val.id === value.itemID ? value.amount : null
-            )}
-          </h3>
+        {cart.cart.map((value) =>
+          val.id === value.itemID ? (
+            <div className="amount-added-container">
+              <button
+                className="minus-button"
+                onClick={() => dispatch(decreaseAmount(val.id))}
+              >
+                {cart.cart.map((value) =>
+                  val.id === value.itemID && value.amount === 1 ? (
+                    <h4>X</h4>
+                  ) : null
+                )}
+                {cart.cart.map((value) =>
+                  val.id === value.itemID && value.amount !== 1 ? (
+                    <h4>-</h4>
+                  ) : null
+                )}
+              </button>
 
-          <button
-            className="plus-button"
-            onClick={() => dispatch(increaseAmount(val.id))}
-          >
-            <h4>+</h4>
-          </button>
-        </div>
+              <h3>
+                {cart.cart.map((value) =>
+                  val.id === value.itemID ? value.amount : null
+                )}
+              </h3>
+
+              <button
+                className="plus-button"
+                onClick={() => dispatch(increaseAmount(val.id))}
+              >
+                <h4>+</h4>
+              </button>
+            </div>
+          ) : null
+        )}
+
         <button
           className="addToCart-button"
           onClick={() =>
