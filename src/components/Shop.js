@@ -34,8 +34,9 @@ function Shop() {
             onClick={() => dispatch(decreaseAmount(val.id))}
           >
             {cart.cart.map((value) =>
-              value.amount === 1 ? <h4>X</h4> : <h4>-</h4>
+              val.id === value.itemID && value.amount === 1 ? <h4>X</h4> : null
             )}
+            <h4>-</h4>
           </button>
           <h3>
             {cart.cart.map((value) =>
