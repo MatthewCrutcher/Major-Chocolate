@@ -99,6 +99,11 @@
   text-align: center;
 }
 
+.loading-items {
+  text-align: center;
+  padding: 10% 0;
+}
+
 @media screen and (max-width: 800px) {
   .shop-items-container {
     grid-template-columns: repeat(2, 20%);

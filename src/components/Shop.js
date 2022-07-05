@@ -83,13 +83,21 @@ function Shop() {
       </div>
     );
   });
+
   return (
     <div>
       <div className="shop-page-header-container">
         <Navbar />
+
         <h1 className="shop-header-text">Stay as long as you like</h1>
       </div>
-      <div className="shop-items-container">{mapItems}</div>
+      {item.loading ? (
+        <h1 className="loading-items">Loading...</h1>
+      ) : item.error !== "" ? (
+        <h1 className="loading-items">{item.error}</h1>
+      ) : (
+        <div className="shop-items-container">{mapItems}</div>
+      )}
     </div>
   );
 }
