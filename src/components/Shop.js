@@ -12,7 +12,6 @@ import {
   addToCart,
   increaseAmount,
   decreaseAmount,
-  checkAmount,
 } from "../app/features/cart/cartSlice";
 
 function Shop() {
@@ -73,22 +72,32 @@ function Shop() {
                 amount: 1,
                 initialPrice: val.price,
                 calcPrice: val.price,
+                imgURL: val.imgURL,
               })
             )
           }
         >
           Add To Cart
         </button>
+        <h4 className="item-price">$ {val.price}</h4>
       </div>
     );
   });
+
   return (
     <div>
       <div className="shop-page-header-container">
         <Navbar />
+
         <h1 className="shop-header-text">Stay as long as you like</h1>
       </div>
-      <div className="shop-items-container">{mapItems}</div>
+      {item.loading ? (
+        <h1 className="loading-items">Loading...</h1>
+      ) : item.error !== "" ? (
+        <h1 className="loading-items">{item.error}</h1>
+      ) : (
+        <div className="shop-items-container">{mapItems}</div>
+      )}
     </div>
   );
 }

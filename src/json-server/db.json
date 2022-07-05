@@ -3,30 +3,44 @@
     {
       "id": 1,
       "title": "Strawberry Delights",
-      "description": "The Best Chocolate",
+      "description": "Romantic Delight",
       "price": 25,
-      "imgURL": "major-chocolate/src/components/images/image2.png"
+      "imgURL": "https://images.unsplash.com/photo-1565889673146-8e4d54300269?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
       "id": 2,
       "title": "Chocolate Bar",
-      "description": "The Best Chocolate",
+      "description": "Simple, classic",
       "price": 35,
-      "imgURL": "major-chocolate/src/components/images/image2.png"
+      "imgURL": "https://images.unsplash.com/photo-1601876819169-9ddf6f214a47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
       "id": 3,
       "title": "Dark Chocolate",
-      "description": "The Best Chocolate",
+      "description": "Sophisticated",
       "price": 15,
-      "imgURL": "major-chocolate/src/components/images/image2.png"
+      "imgURL": "https://images.unsplash.com/photo-1604514813560-1e4f5726db65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
       "id": 4,
       "title": "Milk Chocolate",
       "description": "The Best Chocolate",
       "price": 5,
-      "imgURL": "major-chocolate/src/components/images/image2.png"
+      "imgURL": "https://images.unsplash.com/photo-1548907040-4baa42d10919?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Coffee Chocolate",
+      "description": "Amazing espresso taste",
+      "price": 20,
+      "imgURL": "https://images.unsplash.com/photo-1643094264639-955fdb53cfc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 6,
+      "title": "Orange Citrus",
+      "description": "Just like an orange!",
+      "price": 12,
+      "imgURL": "https://images.unsplash.com/photo-1648141294394-3de0947c9d7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
   ]
 }

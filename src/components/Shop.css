@@ -34,6 +34,10 @@
   background-color: rgb(164, 92, 65);
   margin: 5% 0;
 }
+.item-card img {
+  height: 180px;
+  width: auto;
+}
 
 .addToCart-button {
   width: fit-content;
@@ -61,7 +65,7 @@
   background-color: rgba(252, 59, 59, 1);
   border: none;
   border-radius: 5px;
-  width: 10%;
+  width: 15%;
   margin-right: 5%;
 }
 .minus-button h4 {
@@ -79,7 +83,7 @@
   border: none;
   border-radius: 5px;
   margin-left: 5%;
-  width: 10%;
+  width: 15%;
 }
 .plus-button h4 {
   color: black;
@@ -89,6 +93,15 @@
 .plus-button:hover {
   cursor: pointer;
   background-color: rgb(69, 165, 55);
+}
+
+.item-price {
+  text-align: center;
+}
+
+.loading-items {
+  text-align: center;
+  padding: 10% 0;
 }
 
 @media screen and (max-width: 800px) {
