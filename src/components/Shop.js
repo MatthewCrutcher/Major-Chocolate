@@ -12,7 +12,6 @@ import {
   addToCart,
   increaseAmount,
   decreaseAmount,
-  checkAmount,
 } from "../app/features/cart/cartSlice";
 
 function Shop() {
@@ -73,12 +72,14 @@ function Shop() {
                 amount: 1,
                 initialPrice: val.price,
                 calcPrice: val.price,
+                imgURL: val.imgURL,
               })
             )
           }
         >
           Add To Cart
         </button>
+        <h4 className="item-price">$ {val.price}</h4>
       </div>
     );
   });

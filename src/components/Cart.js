@@ -23,7 +23,7 @@ function Cart() {
   const mappingCart = cart.cart.map((value) => {
     return (
       <>
-        <img src={image2} alt="Product Image props.image" />
+        <img src={value.imgURL} alt={value.title} />
         <h2>{value.title}</h2>
         <div className="quantity-container">
           <h2>Quantity:</h2>
