@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 //Component
 import Navbar from "./Navbar";
 //CSS
 import "./Shop.css";
-//IMAGES
-import shopItem from "./images/image2.png";
 //REDUX TOOLKIT --- REACT-REDUX
 import { useDispatch, useSelector } from "react-redux";
 import { fetchItems } from "../app/features/shop/shopSlice";
@@ -20,16 +18,16 @@ function Shop() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchItems());
-  }, []);
+  }, [dispatch]);
   const mapItems = item.items.map((val) => {
     return (
-      <div className="item-card">
+      <div className="item-card" key={val.id}>
         <img src={val.imgURL} alt={val.title} />
         <h3>{val.title}</h3>
         <p>{val.description}</p>
         {cart.cart.map((value) =>
           val.id === value.itemID ? (
-            <div className="amount-added-container">
+            <div className="amount-added-container" key={value.itemID}>
               <button
                 className="minus-button"
                 onClick={() => dispatch(decreaseAmount(val.id))}
