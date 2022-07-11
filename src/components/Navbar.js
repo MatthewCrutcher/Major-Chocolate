@@ -14,7 +14,7 @@ function Navbar() {
   };
   return (
     <div className="navbar-container">
-      <a className="logo-link" href={() => {}} onClick={() => navigate("/")}>
+      <a className="logo-link" onClick={() => navigate("/")}>
         <h1>Major Chocolate</h1>
       </a>
       <img
@@ -26,10 +26,10 @@ function Navbar() {
       <div className={active ? "navbar-links-active" : "navbar-links"}>
         <ul>
           <li onClick={() => navigate("/shop")}>
-            <a href={() => {}}>SHOP</a>
+            <a>SHOP</a>
           </li>
           <li onClick={() => navigate("/cart")}>
-            <a href={() => {}}>
+            <a>
               <img src={Cart} alt="Shopping Cart" />
             </a>
           </li>
