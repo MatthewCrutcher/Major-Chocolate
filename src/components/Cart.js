@@ -17,7 +17,7 @@ function Cart() {
   const cart = useSelector((state) => state.cart);
   const mappingCart = cart.cart.map((value) => {
     return (
-      <>
+      <div className="key-value-container" key={value.itemID}>
         <img src={value.imgURL} alt={value.title} />
         <h2>{value.title}</h2>
         <div className="quantity-container">
@@ -40,7 +40,7 @@ function Cart() {
           <h2>Total Price:</h2>
           <h2>${value.calcPrice}</h2>
         </div>
-      </>
+      </div>
     );
   });
   return (
