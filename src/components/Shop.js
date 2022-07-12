@@ -34,12 +34,12 @@ function Shop() {
               >
                 {cart.cart.map((value) =>
                   val.id === value.itemID && value.amount === 1 ? (
-                    <h4>X</h4>
+                    <h4 key={value.itemID}>X</h4>
                   ) : null
                 )}
                 {cart.cart.map((value) =>
                   val.id === value.itemID && value.amount !== 1 ? (
-                    <h4>-</h4>
+                    <h4 key={value.itemID}>-</h4>
                   ) : null
                 )}
               </button>
